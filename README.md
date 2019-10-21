@@ -1,6 +1,6 @@
 # SwiftyJSONFetch
 
-[![CI Status](https://img.shields.io/travis/Thomas Marien/SwiftyJSONFetch.svg?style=flat)](https://travis-ci.org/Thomas Marien/SwiftyJSONFetch)
+[![CI Status](https://img.shields.io/travis/titatomte/SwiftyJSONFetch.svg?style=flat)](https://travis-ci.org/titatomte/SwiftyJSONFetch)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyJSONFetch.svg?style=flat)](https://cocoapods.org/pods/SwiftyJSONFetch)
 [![License](https://img.shields.io/cocoapods/l/SwiftyJSONFetch.svg?style=flat)](https://cocoapods.org/pods/SwiftyJSONFetch)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyJSONFetch.svg?style=flat)](https://cocoapods.org/pods/SwiftyJSONFetch)
