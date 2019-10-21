@@ -29,12 +29,14 @@
 import Foundation
 
 
-internal protocol URLServiceProtocol {
+public protocol URLServiceProtocol {
     func urlWithParameters(url: URL, parameters: [String:String]) -> URL
 }
 
-internal class URLService: URLServiceProtocol {
-    func urlWithParameters(url: URL, parameters: [String:String]) -> URL {        
+public class URLService: URLServiceProtocol {
+    public init() {}
+    
+    public func urlWithParameters(url: URL, parameters: [String:String]) -> URL {        
         var queryItems: [URLQueryItem] = []
         for (key, parameter) in parameters {
             queryItems.append(URLQueryItem(name: key, value: parameter))

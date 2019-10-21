@@ -37,7 +37,7 @@ public enum HTTPMethod: String {
     case delete = "DELETE"
 }
 
-enum DataError: Error {
+public enum DataError: Error {
     case withMessage(String)
     
     public var errorDescription: String? {
@@ -58,36 +58,36 @@ public class SwiftyJSONFetch {
     fileprivate var networkService: NetworkServiceProtocol
     
     
-    init(codingService: CodingProtocol = CodingService(), networkService: NetworkServiceProtocol = NetworkService()) {
+    public init(codingService: CodingProtocol = CodingService(), networkService: NetworkServiceProtocol = NetworkService()) {
         self.codingService = codingService
         self.networkService = networkService
     }
     
     
     //MARK: - Customization
-    func method(_ method: HTTPMethod) -> SwiftyJSONFetch {
+    public func method(_ method: HTTPMethod) -> SwiftyJSONFetch {
         self.method = method
         return self
     }
     
-    func parameters(_ parameter: [String:String]) -> SwiftyJSONFetch {
+    public func parameters(_ parameter: [String:String]) -> SwiftyJSONFetch {
         self.parameter = parameter
         return self
     }
     
-    func header(_ parameter: [String:String]) -> SwiftyJSONFetch {
+    public func header(_ parameter: [String:String]) -> SwiftyJSONFetch {
         self.header = parameter
         return self
     }
     
-    func body(_ data: Data) -> SwiftyJSONFetch {
+    public func body(_ data: Data) -> SwiftyJSONFetch {
         self.body = data
         return self
     }
     
     
     //MARK: - Fetching
-    func fetch<T: Decodable>(fromURLString urlString: String, forType type: T.Type, _ completion: @escaping (_ response: T?, _ error: DataError?) -> ()) {
+    public func fetch<T: Decodable>(fromURLString urlString: String, forType type: T.Type, _ completion: @escaping (_ response: T?, _ error: DataError?) -> ()) {
         guard let url = URL(string: urlString) else {
             return completion(nil, DataError.withMessage("URL could not be created from string: \(urlString)"))
         }
@@ -110,7 +110,7 @@ public class SwiftyJSONFetch {
         }
     }
     
-    func fetch<T: Decodable>(fromFileName fileName: String, forBundle bundle: Bundle = Bundle.main, forType type: T.Type, _ completion: @escaping (_ response: T?, _ error: DataError?) -> ()) {
+    public func fetch<T: Decodable>(fromFileName fileName: String, forBundle bundle: Bundle = Bundle.main, forType type: T.Type, _ completion: @escaping (_ response: T?, _ error: DataError?) -> ()) {
         
         
         guard let path = bundle.path(forResource: fileName, ofType: "json") else {

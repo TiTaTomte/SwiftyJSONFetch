@@ -29,19 +29,19 @@
 import Foundation
 
 
-internal protocol NetworkServiceProtocol {
+public protocol NetworkServiceProtocol {
     func fetch(url: URL, parameters: [String: String], bodyData: Data?, method: HTTPMethod, header: [String:String], completion: @escaping (_ reponse: Data?, _ error: DataError?) -> ())
 }
 
-internal class NetworkService: NetworkServiceProtocol {
+public class NetworkService: NetworkServiceProtocol {
     
     fileprivate var urlService: URLServiceProtocol
     
-    init(urlService: URLServiceProtocol = URLService()) {
+    public init(urlService: URLServiceProtocol = URLService()) {
         self.urlService = urlService
     }
     
-    func fetch(url: URL, parameters: [String: String], bodyData: Data?, method: HTTPMethod, header: [String:String], completion: @escaping (_ reponse: Data?, _ error: DataError?) -> ()) {
+    public func fetch(url: URL, parameters: [String: String], bodyData: Data?, method: HTTPMethod, header: [String:String], completion: @escaping (_ reponse: Data?, _ error: DataError?) -> ()) {
         
         var request = URLRequest(url: urlService.urlWithParameters(url: url, parameters: parameters))
         request.allHTTPHeaderFields = header

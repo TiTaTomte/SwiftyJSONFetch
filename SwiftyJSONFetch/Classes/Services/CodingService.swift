@@ -29,13 +29,15 @@
 import Foundation
 
 
-internal protocol CodingProtocol {
+public protocol CodingProtocol {
     func decode<T: Decodable>(data: Data, asType type: T.Type) -> (decoded: T?, error: DataError?)
 }
 
-internal class CodingService: CodingProtocol {
+public class CodingService: CodingProtocol {
     
-    func decode<T: Decodable>(data: Data, asType type: T.Type) -> (decoded: T?, error: DataError?) {
+    public init() {}
+    
+    public func decode<T: Decodable>(data: Data, asType type: T.Type) -> (decoded: T?, error: DataError?) {
         do {
             let obj = try JSONDecoder().decode(type, from: data)
             return (obj, nil)
