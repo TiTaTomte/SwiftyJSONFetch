@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftyJSONFetch'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of SwiftyJSONFetch.'
+  s.summary          = 'A lightweight JSON fetching library.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This library was written because of the amount of coding challenges I had to do while I applied to various companies. As the most challenges consist of fetching some JSON from somewhere, I decided to reuse the logic as a pod.
                        DESC
 
-  s.homepage         = 'https://github.com/Thomas Marien/SwiftyJSONFetch'
+  s.homepage         = 'https://github.com/titatomte/SwiftyJSONFetch'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Thomas Marien' => 'thomas.marien@web.de' }
-  s.source           = { :git => 'https://github.com/Thomas Marien/SwiftyJSONFetch.git', :tag => s.version.to_s }
+  s.author           = { 'Thomas Marien' => 'titatomte@gmail.com' }
+  s.source           = { :git => 'https://github.com/titatomte/SwiftyJSONFetch.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '13.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'SwiftyJSONFetch/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SwiftyJSONFetch' => ['SwiftyJSONFetch/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

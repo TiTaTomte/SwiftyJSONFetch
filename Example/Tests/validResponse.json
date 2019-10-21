@@ -1,0 +1,5 @@
+{
+    "id": "testId",
+    "number": 123.4,
+    "optionalNumber": 42
+}

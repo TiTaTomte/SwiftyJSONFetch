@@ -2,5 +2,6 @@ use_frameworks!
 target 'SwiftyJSONFetch_Tests' do
   pod 'SwiftyJSONFetch', :path => '../'
   
-  
+  pod 'OHHTTPStubs', '~> 8.0.0'
+  pod 'OHHTTPStubs/Swift', '~> 8.0.0'
 end
