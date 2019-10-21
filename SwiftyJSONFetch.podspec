@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This library was written because of the amount of coding challenges I had to do while I applied to various companies. As the most challenges consist of fetching some JSON from somewhere, I decided to reuse the logic as a pod.
+Due to the amount of coding challenges for new jobs, where 99% are about loading JSON from somewhere, I decided to implement my own solution instead of using Alamofire (which is indeed awesome) or another library. That helped me refreshing my knowledge and in the end I learned something new. I also decided to make it public so you guys can learn or even make it better. Feel free to contribute! Bring in your ideas!
                        DESC
 
   s.homepage         = 'https://github.com/titatomte/SwiftyJSONFetch'
