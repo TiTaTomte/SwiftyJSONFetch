@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SwiftyJSONFetch_Tests' do
+  pod 'SwiftyJSONFetch', :path => '../'
+  
+  
+end
