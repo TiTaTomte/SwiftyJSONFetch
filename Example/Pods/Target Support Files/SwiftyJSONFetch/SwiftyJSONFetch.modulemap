@@ -1,0 +1,6 @@
+framework module SwiftyJSONFetch {
+  umbrella header "SwiftyJSONFetch-umbrella.h"
+
+  export *
+  module * { export * }
+}
